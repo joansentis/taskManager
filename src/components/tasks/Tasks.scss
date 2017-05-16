@@ -1,0 +1,206 @@
+.tasks-container {
+    .tasks-header-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgba(0, 177, 106, 1);
+        background: -moz-linear-gradient(left, rgba(0, 177, 106, 1) 0%, rgba(3, 166, 120, 1) 100%);
+        background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0, 177, 106, 1)), color-stop(100%, rgba(3, 166, 120, 1)));
+        background: -webkit-linear-gradient(left, rgba(0, 177, 106, 1) 0%, rgba(3, 166, 120, 1) 100%);
+        background: -o-linear-gradient(left, rgba(0, 177, 106, 1) 0%, rgba(3, 166, 120, 1) 100%);
+        background: -ms-linear-gradient(left, rgba(0, 177, 106, 1) 0%, rgba(3, 166, 120, 1) 100%);
+        background: linear-gradient(to right, rgba(0, 177, 106, 1) 0%, rgba(3, 166, 120, 1) 100%);
+        width: 100%;
+        height: 66px;
+        box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
+        z-index: 999;
+        .tasks-header-content {
+            max-width: 80%;
+            height: 100%;
+            margin: 0 auto;
+            position: relative;
+            .logo {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                h3 {
+                    color: #fff;
+                    margin: 0;
+                    font-weight: bold;
+                }
+            }
+            .sign-out {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+                width: 46px;
+                height: 46px;
+                border-radius: 50%;
+                box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 2px 4px rgba(0, 0, 0, .28);
+                cursor: pointer;
+                i {
+                    color: #fff;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+    }
+    .tasks-content {
+        max-width: 80%;
+        margin: 0 auto;
+        padding-top: 90px;
+        .add-task {
+            width: 100%;
+            .input-group {
+                input,
+                button {
+                    border: 0;
+                    box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 2px 8px rgba(0, 0, 0, .28);
+                }
+                input {
+                    height: 40px;
+                }
+                button {
+                    height: 42px;
+                    background: #03a678;
+                    color: #fff;
+                    font-weight: bold;
+                    margin-top: -1px;
+                }
+            }
+        }
+        .task-list {
+            width: 100%;
+            border-radius: 4px;
+            box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 2px 8px rgba(0, 0, 0, .28);
+            margin: 30px 0;
+            .task-list-container {
+                position: relative;
+                padding: 10px 24px;
+                border-bottom: 1px solid #ddd;
+                &:hover {
+                    .actions {
+                        .icon {
+                            visibility: visible;
+                            opacity: 1;
+                        }
+                    }
+                }
+                .content {
+                    .task {
+                        font-size: 1.2em;
+                        text-transform: capitalize;
+                    }
+                    .submited-by {
+                        margin-top: 6px;
+                    }
+                }
+                .actions {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    display: flex;
+                    width: auto;
+                    height: 100%;
+                    padding: 14px;
+                    background: #fff;
+                    .icon {
+                        width: 40px;
+                        height: 40px;
+                        cursor: pointer;
+                        font-size: 1.2em;
+                        margin-right: 10px;
+                        opacity: 0;
+                        transition: .3s all;
+                        border-radius: 50%;
+                        background: #ddd;
+                        position: relative;
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                        &:hover {
+                            background: #ccc;
+                            color: #fff;
+                        }
+                        i {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                        }
+                    }
+                }
+            }
+        }
+        .completed-tasks {
+            width: 100%;
+            .completed-task-container {
+                position: relative;
+                .completed-task-content {
+                    margin-top: 20px;
+                    box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 2px 8px rgba(0, 0, 0, .28);
+                    .completed-task-card {
+                        border-bottom: 1px solid #ddd;
+                        border-radius: 4px;
+                        padding: 10px 24px;
+                        position: relative;
+                        &:hover {
+                            .actions {
+                                .icon {
+                                    visibility: visible;
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                        .task {
+                            font-size: 1.2em;
+                            text-transform: capitalize;
+                        }
+                        .submited-by {
+                            margin-top: 6px;
+                        }
+                        .actions {
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            display: flex;
+                            width: auto;
+                            height: 100%;
+                            padding: 14px;
+                            background: #fff;
+                            .icon {
+                                width: 40px;
+                                height: 40px;
+                                cursor: pointer;
+                                font-size: 1.2em;
+                                margin-right: 10px;
+                                opacity: 0;
+                                transition: .3s all;
+                                border-radius: 50%;
+                                background: #ddd;
+                                position: relative;
+                                &:last-child {
+                                    margin-right: 0;
+                                }
+                                &:hover {
+                                    background: #ccc;
+                                }
+                                i {
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 50%;
+                                    transform: translate(-50%, -50%);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
